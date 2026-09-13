@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Minimalismo e Conforto - Heitor Rocha Arquitetura</title>
+    <title>Fale Conosco - Heitor Rocha Arquitetura</title>
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
@@ -21,10 +21,12 @@
         <nav class="main-nav">
           <a href="index.html" class="nav-link">Início</a>
           <a href="sobre.html" class="nav-link">Sobre nós</a>
-          <a href="publicacoes.html" class="nav-link active">Publicações</a>
+          <a href="publicacoes.html" class="nav-link">Publicações</a>
           <a href="clientes.html" class="nav-link">Clientes</a>
           <a href="projetos.html" class="nav-link">Projetos</a>
-          <a href="fale-conosco.html" class="nav-btn">Fale Conosco</a>
+          <a href="fale-conosco.html" class="nav-btn current-page"
+            >Fale Conosco</a
+          >
         </nav>
 
         <button
@@ -47,7 +49,7 @@
         <div class="mobile-menu-links">
           <a href="index.html" class="mobile-link">Início</a>
           <a href="sobre.html" class="mobile-link">Sobre nós</a>
-          <a href="publicacoes.html" class="mobile-link active">Publicações</a>
+          <a href="publicacoes.html" class="mobile-link">Publicações</a>
           <a href="clientes.html" class="mobile-link">Clientes</a>
           <a href="projetos.html" class="mobile-link">Projetos</a>
           <a href="fale-conosco.html" class="mobile-link mobile-link-btn"
@@ -57,75 +59,104 @@
       </div>
     </header>
 
-    <main class="site-main">
-      <article class="article-container">
-        <a href="publicacoes.html" class="article-back-link">
-          &larr; Voltar para Publicações
-        </a>
+    <main class="site-main centered-layout">
+      <section class="contact-section">
+        <div class="container-form">
+          <div class="contact-card">
+            <h1 class="contact-card-title">Fale Conosco</h1>
+            <p class="contact-card-desc">
+              Tem uma ideia ou projeto em mente? Preencha o formulário abaixo ou
+              fale diretamente conosco pelo WhatsApp.
+            </p>
 
-        <p class="article-meta">Design • 05 Mai 2026</p>
+            <form
+              class="contact-form"
+              action="#"
+              method="POST"
+              onsubmit="
+                event.preventDefault();
+                alert(
+                  'Mensagem enviada com sucesso! Entraremos em contato em breve.',
+                );
+                this.reset();
+              "
+            >
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">Nome Completo</label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="Seu nome"
+                    class="form-input"
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">E-mail</label>
+                  <input
+                    type="email"
+                    required
+                    placeholder="seu@email.com"
+                    class="form-input"
+                  />
+                </div>
+              </div>
 
-        <h1 class="article-title">
-          Minimalismo e Conforto: O Equilíbrio Perfeito
-        </h1>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">Telefone / WhatsApp</label>
+                  <input
+                    type="tel"
+                    placeholder="(11) 99999-9999"
+                    class="form-input"
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Tipo de Projeto</label>
+                  <select class="form-input">
+                    <option value="residencial">Residencial</option>
+                    <option value="corporativo">Corporativo</option>
+                    <option value="outro">Outro</option>
+                  </select>
+                </div>
+              </div>
 
-        <img
-          src="https://images.unsplash.com/photo-1524813686514-a57563d77965?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-          alt="Minimalismo e Conforto"
-          class="article-featured-img"
-        />
+              <div class="form-group">
+                <label class="form-label">Mensagem</label>
+                <textarea
+                  rows="4"
+                  required
+                  placeholder="Conte-nos um pouco sobre a sua necessidade..."
+                  class="form-textarea"
+                ></textarea>
+              </div>
 
-        <div class="article-prose">
-          <p>
-            Durante muito tempo, o termo "minimalismo" esteve erroneamente
-            associado a ambientes frios, vazios, sem vida ou com sensação de
-            galeria de arte inabitável. No entanto, a arquitetura contemporânea
-            nos ensina que a essência do minimalismo não é a privação, mas sim a
-            clareza e a intencionalidade.
-          </p>
-          <p>
-            Ao eliminar o excesso visual e os ruídos desnecessários, abrimos
-            espaço para o que verdadeiramente importa: a luz, os materiais
-            nobres, o fluxo natural das pessoas e, acima de tudo, o conforto
-            emocional e físico.
-          </p>
+              <button type="submit" class="form-submit-btn">
+                Enviar Mensagem
+              </button>
+            </form>
 
-          <h3>Texturas e Materiais Naturais</h3>
-          <p>
-            Para criar um ambiente minimalista que acolhe, a resposta está na
-            seleção criteriosa de texturas. A madeira em tons quentes, a pedra
-            natural com acabamento escovado, tecidos em linho e algodão cru
-            trazem uma riqueza sensorial incomparável sem sobrecarregar
-            visualmente o espaço.
-          </p>
-
-          <blockquote>
-            "Menos não significa vazio. Menos significa deixar que cada detalhe
-            tenha voz e propósito."
-          </blockquote>
-
-          <h3>Iluminação Indireta e Cênica</h3>
-          <p>
-            A iluminação desempenha um papel crucial nessa equação. Fitas de LED
-            embutidas em sancas sutis, arandelas que desenham a luz na parede e
-            luminárias com temperatura de cor suave (2700K a 3000K) transformam
-            as linhas retas em refúgios relaxantes ao cair da noite.
-          </p>
-          <p>
-            O verdadeiro luxo da vida moderna é retornar para um lar sereno,
-            organizado e capaz de recarregar nossas energias.
-          </p>
-        </div>
-
-        <div class="article-share">
-          <h4 class="article-share-title">Compartilhe este artigo</h4>
-          <div class="article-share-links">
-            <a href="#" class="share-btn">WhatsApp</a>
-            <a href="#" class="share-btn">LinkedIn</a>
-            <a href="#" class="share-btn">Twitter</a>
+            <div class="contact-whatsapp-block">
+              <p class="contact-whatsapp-text">
+                Prefere um contato mais direto e rápido?
+              </p>
+              <a
+                href="https://wa.me/5511999999999"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-whatsapp"
+              >
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.88-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
+                  />
+                </svg>
+                Falar pelo WhatsApp
+              </a>
+            </div>
           </div>
         </div>
-      </article>
+      </section>
     </main>
 
     <footer class="site-footer">

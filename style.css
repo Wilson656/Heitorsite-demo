@@ -1,3 +1,17 @@
+@font-face {
+  font-family: "Proxima Nova Wide";
+  src: url("./Fontes/Wide/Proxima\ Nova\ Wide\ Regular.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("./Fontes/DMSans/DMSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
   --color-olive: #83844f;
   --color-olive-dark: #565734;
@@ -42,9 +56,8 @@
   --color-gray-800: #2b2825;
   --color-gray-900: var(--color-charcoal);
 
-  --font-serif: "Playfair Display", Georgia, serif;
-  --font-sans:
-    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-heading-btn: "Proxima Nova Wide";
+  --font-base: "DM Sans";
 
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md:
@@ -74,8 +87,8 @@ html {
 }
 
 body {
-  font-family: var(--font-sans);
-  background-color: var(--color-white);
+  font-family: var(--font-base);
+  background-color: var(--color-cream);
   color: var(--color-gray-900);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -100,10 +113,31 @@ a {
 }
 
 button {
-  font-family: inherit;
+  font-family: var(--font-heading-btn);
   cursor: pointer;
   border: none;
   background: none;
+}
+
+h1,
+.hero-title,
+.vision-title,
+.featured-projects-heading,
+.owner-badge-title,
+.page-hero-title,
+.article-title,
+.contact-card-title,
+.page-title-center {
+  font-family: var(--font-heading-btn);
+}
+
+.nav-btn,
+.hero-cta-btn,
+.btn-black,
+.cta-outline-btn,
+.form-submit-btn,
+.btn-whatsapp {
+  font-family: var(--font-heading-btn);
 }
 
 .site-main {
@@ -330,9 +364,12 @@ button {
   flex-direction: column;
   align-items: center;
 }
+.footer-brand img {
+  height: 70px;
+}
 
 .footer-brand-logo {
-  font-family: var(--font-serif);
+  font-family: var(--font-heading-btn);
   font-size: 1.875rem;
   font-weight: 700;
   letter-spacing: 0.15em;
@@ -438,7 +475,6 @@ button {
 }
 
 .hero-title {
-  font-family: var(--font-serif);
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--color-white);
@@ -491,7 +527,6 @@ button {
 }
 
 .vision-title {
-  font-family: var(--font-serif);
   font-size: 2rem;
   color: var(--color-black);
   margin-bottom: 1.5rem;
@@ -505,15 +540,14 @@ button {
 
 .featured-projects-section {
   padding: 4.5rem 0;
-  background-color: rgba(255, 255, 255, 0.7);
-  background-image: url(./heitor/Patterns/Prancheta\ 1.png);
+  background-color: var(--color-black);
+  background-image: url(./heitor/Patterns/Prancheta\ 4.png);
   backdrop-filter: blur(8px);
   background-size: 90%;
   background-position: center;
 }
 
 .featured-projects-heading {
-  font-family: var(--font-serif);
   font-size: 3rem;
   color: var(--color-black);
   text-align: center;
@@ -539,11 +573,13 @@ button {
 }
 
 .project-card {
-  background-color: var(--color-white);
+  position: relative;
+  height: 420px;
+  overflow: hidden;
   border-radius: var(--radius-lg);
+  background-color: var(--color-black);
   box-shadow: var(--shadow-md);
   border: 1px solid var(--color-cream-border);
-  overflow: hidden;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
@@ -555,9 +591,11 @@ button {
 }
 
 .project-card-thumb {
-  position: relative;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
-  aspect-ratio: 4 / 3;
 }
 
 .project-card-img {
@@ -572,41 +610,72 @@ button {
     transform 0.6s ease-in-out;
 }
 
+.project-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.25) 45%,
+    rgba(0, 0, 0, 0) 75%
+  );
+}
+
 .project-card:hover .project-card-img {
   filter: grayscale(0%);
   transform: scale(1.05);
 }
 
 .project-card-info {
-  padding: 1.5rem;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.4rem 1.5rem;
+
+  background: rgba(25, 25, 25, 0.42);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
   text-align: center;
+  color: var(--color-white);
 }
 
 .project-card-name {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: var(--color-black);
+  margin-bottom: 0.4rem;
+  color: var(--color-white);
 }
 
 .project-card-type {
-  color: var(--color-gray-500);
-  margin-bottom: 1rem;
-  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 0.9rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
 }
 
 .project-card-btn {
-  color: var(--color-brand-accent);
+  color: var(--color-white);
   font-weight: 600;
   text-decoration: none;
   font-size: 0.9375rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  padding-bottom: 3px;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .project-card-btn:hover {
-  color: var(--color-brand-accent-hover);
-  text-decoration: underline;
+  color: var(--color-brand-accent);
+  border-color: var(--color-brand-accent);
 }
 
 .featured-projects-action {
@@ -640,6 +709,7 @@ button {
   position: relative;
   background-color: var(--color-white);
   padding: 5rem 0;
+  background-color: var(--color-cream);
 }
 
 .owner-bg-stripe {
@@ -688,14 +758,13 @@ button {
 }
 
 .owner-badge-lead {
-  font-family: var(--font-serif);
+  font-family: var(--font-heading-btn);
   font-size: 1.75rem;
   color: var(--color-black);
   line-height: 1.2;
 }
 
 .owner-badge-title {
-  font-family: var(--font-serif);
   font-size: 2.25rem;
   font-weight: 700;
   color: var(--color-black);
@@ -805,8 +874,8 @@ button {
 
 .cta-minimal-section {
   padding: 6rem 1.5rem;
-  background-color: rgba(255, 255, 255, 0.7);
-  background-image: url(./heitor/Patterns/Prancheta\ 1.png);
+  background-color: var(--color-black);
+  background-image: url(./heitor/Patterns/Prancheta\ 4.png);
   backdrop-filter: blur(8px);
   background-size: 90%;
   background-position: center;
@@ -819,7 +888,7 @@ button {
 }
 
 .cta-minimal-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-heading-btn);
   font-size: 2rem;
   color: var(--color-black);
   margin-bottom: 1rem;
@@ -888,7 +957,6 @@ button {
 }
 
 .page-hero-title {
-  font-family: var(--font-serif);
   font-size: 2.5rem;
   color: var(--color-white);
   font-weight: 700;
@@ -1009,6 +1077,12 @@ button {
 .about-biography-block {
   position: relative;
   margin-top: 6rem;
+  padding: 4.5rem 0;
+  background-color: var(--color-black);
+  background-image: url(./heitor/Patterns/Prancheta\ 3.png);
+  backdrop-filter: blur(8px);
+  background-size: 90%;
+  background-position: center;
 }
 
 .about-biography-bg {
@@ -1062,7 +1136,6 @@ button {
 }
 
 .page-title-center {
-  font-family: var(--font-serif);
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--color-black);
@@ -1190,7 +1263,6 @@ button {
 }
 
 .article-title {
-  font-family: var(--font-serif);
   font-size: 2.25rem;
   font-weight: 700;
   color: var(--color-black);
@@ -1225,7 +1297,7 @@ button {
 }
 
 .article-prose h3 {
-  font-family: var(--font-serif);
+  font-family: var(--font-heading-btn);
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--color-black);
@@ -1473,7 +1545,6 @@ button {
 }
 
 .contact-card-title {
-  font-family: var(--font-serif);
   font-size: 2.25rem;
   font-weight: 700;
   text-align: center;
