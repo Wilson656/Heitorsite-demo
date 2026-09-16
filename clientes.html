@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clientes - Heitor Rocha Arquitetura</title>
+    <title>Clientes & Projetos - Heitor Rocha Arquitetura</title>
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
@@ -14,10 +14,18 @@
     <header class="site-header">
       <div class="site-header-container">
         <a href="index.html" class="site-logo">
-          <span class="site-logo-text"
-            ><img src="./heitor/Logotipos/Creme - Logo 4.png" alt=""
-          /></span>
+          <span class="site-logo-text">
+            <img
+              src="./heitor/Logotipos/Creme - Logo 4.png"
+              alt=""
+              onerror="
+                this.style.display = 'none';
+                this.parentElement.textContent = 'HOR';
+              "
+            />
+          </span>
         </a>
+
         <nav class="main-nav">
           <a href="index.html" class="nav-link">Início</a>
           <a href="sobre.html" class="nav-link">Sobre nós</a>
@@ -59,67 +67,772 @@
 
     <main class="site-main">
       <section class="page-section">
-        <div class="container">
-          <h1 class="page-title-center">O que dizem nossos clientes</h1>
+        <div class="container clients-section-wrapper">
+          <div class="clients-intro-header">
+            <h1 class="clients-main-title">Clientes & Histórias</h1>
+            <p class="clients-intro-subtitle">
+              A experiência de quem confiou sua visão ao nosso escritório.
+              Conheça as obras concebidas e o relato de quem vivencia cada
+              espaço.
+            </p>
+          </div>
 
-          <div class="testimonials-list">
-            <div class="testimonial-card border-blue">
-              <p class="testimonial-text">
-                "O Heitor entendeu exatamente a nossa necessidade para o novo
-                prédio da empresa. Conseguiu alinhar conforto acústico,
-                modernidade e um visual imponente que impressiona todos os
-                clientes que chegam."
-              </p>
-              <div class="testimonial-author-row">
-                <div class="author-avatar-initials">MR</div>
-                <div>
-                  <p class="author-name">Marcos Ribeiro</p>
-                  <p class="author-project">
-                    Diretor, TechCorp (Projeto Corporativo)
-                  </p>
-                </div>
+          <div class="clients-stats-strip">
+            <div class="client-stat-box">
+              <div class="client-stat-number">100%</div>
+              <div class="client-stat-label">Projetos Entregues no Prazo</div>
+            </div>
+            <div class="client-stat-box">
+              <div class="client-stat-number">+45.000 m²</div>
+              <div class="client-stat-label">Área Construída & Projetada</div>
+            </div>
+            <div class="client-stat-box">
+              <div class="client-stat-number">5.0 ★</div>
+              <div class="client-stat-label">
+                Índice de Satisfação dos Clientes
               </div>
             </div>
+          </div>
 
-            <div class="testimonial-card border-accent">
-              <p class="testimonial-text">
-                "Nossa casa ficou incrível. Cada cantinho foi pensado para a
-                rotina da nossa família com as crianças. A integração dos
-                ambientes com o jardim trouxe uma paz que nunca tivemos antes.
-                Recomendo de olhos fechados!"
-              </p>
-              <div class="testimonial-author-row">
-                <div class="author-avatar-initials">AS</div>
+          <div class="clients-filter-bar">
+            <button class="client-filter-btn active" data-filter="todos">
+              Todos os Clientes
+            </button>
+            <button class="client-filter-btn" data-filter="residencial">
+              Projetos Residenciais
+            </button>
+            <button class="client-filter-btn" data-filter="corporativo">
+              Projetos Corporativos
+            </button>
+          </div>
+
+          <div class="client-cards-list">
+            <article
+              class="client-card-item theme-petroleum"
+              data-category="residencial"
+            >
+              <div class="client-card-accent-bar"></div>
+
+              <div class="client-content-body">
                 <div>
-                  <p class="author-name">Ana & Sérgio</p>
-                  <p class="author-project">
-                    Casa Horizonte (Projeto Residencial)
-                  </p>
+                  <div class="client-header-meta">
+                    <span class="client-service-tag"
+                      >Arquitetura Residencial</span
+                    >
+                    <div
+                      class="client-rating-stars"
+                      aria-label="Avaliação 5 estrelas"
+                    >
+                      <svg viewBox="0 0 20 20">
+                        <path
+                          d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                        />
+                      </svg>
+                      <svg viewBox="0 0 20 20">
+                        <path
+                          d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                        />
+                      </svg>
+                      <svg viewBox="0 0 20 20">
+                        <path
+                          d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                        />
+                      </svg>
+                      <svg viewBox="0 0 20 20">
+                        <path
+                          d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                        />
+                      </svg>
+                      <svg viewBox="0 0 20 20">
+                        <path
+                          d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div class="client-quote-wrap">
+                    <span class="client-quote-mark" aria-hidden="true">
+                      <svg viewBox="0 0 32 26">
+                        <path
+                          d="M0 26V14.5455C0 6.64336 4.90909 1.18182 12.5455 0L14.7273 4.18182C9.45455 5.27273 6.90909 8.36364 6.90909 11.8182H13.8182V26H0ZM17.4545 26V14.5455C17.4545 6.64336 22.3636 1.18182 30 0L32.1818 4.18182C26.9091 5.27273 24.3636 8.36364 24.3636 11.8182H31.2727V26H17.4545Z"
+                        />
+                      </svg>
+                    </span>
+                    <p class="client-testimonial-quote">
+                      Quando eu conversei com o Heitor eu só tinha a
+                      <strong>vontade de construir minha casa</strong>. Agora
+                      com o projeto concluído eu só tenho a
+                      <strong>agradecer por todo o processo</strong>, foi
+                      extremamente atencioso aos detalhes de conforto e
+                      iluminação. Uma experiência que vou levar pra vida toda.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="client-profile-row">
+                  <div class="client-avatar-wrapper">
+                    <img
+                      src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                      alt="Lucas Antonio"
+                      class="client-avatar-img"
+                    />
+                    <span
+                      class="client-verified-icon"
+                      title="Cliente verificado"
+                    >
+                      <svg viewBox="0 0 20 20">
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="client-info-col">
+                    <h2 class="client-name">Lucas Antonio</h2>
+                    <span class="client-handle">@lucasmaster000</span>
+                    <span class="client-role"
+                      >Proprietário • Casa Horizonte</span
+                    >
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="testimonial-card border-blue">
-              <p class="testimonial-text">
-                "Profissionalismo do início ao fim. Os prazos foram
-                rigorosamente cumpridos e o acompanhamento de obra fez toda a
-                diferença para que o orçamento não estourasse. Excelente
-                trabalho."
-              </p>
-              <div class="testimonial-author-row">
-                <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
-                  alt="Juliana Costa"
-                  class="author-avatar-photo"
-                />
-                <div>
-                  <p class="author-name">Juliana Costa</p>
-                  <p class="author-project">
-                    Empresária (Escritório de Advocacia)
-                  </p>
+              <div class="client-project-side">
+                <div class="client-project-box">
+                  <div class="client-project-media-wrap">
+                    <img
+                      src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                      alt="Projeto Casa Horizonte"
+                      class="client-project-img"
+                    />
+                    <span class="client-project-badge">Residencial</span>
+                  </div>
+                  <div class="client-project-details">
+                    <span class="client-project-overtitle"
+                      >Projeto Desenvolvido</span
+                    >
+                    <h3 class="client-project-name">Casa Horizonte</h3>
+                    <div class="client-project-specs-list">
+                      <div class="client-project-spec-item">
+                        <svg
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                          />
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                          />
+                        </svg>
+                        <span>Campinas, SP</span>
+                      </div>
+                      <div class="client-project-spec-item">
+                        <svg
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+                          />
+                        </svg>
+                        <span>650 m² • Terreno em declive</span>
+                      </div>
+                      <div class="client-project-spec-item">
+                        <svg
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                          />
+                        </svg>
+                        <span>Ano de Conclusão: 2024</span>
+                      </div>
+                    </div>
+                    <a href="projeto-2.html" class="client-project-btn">
+                      <span>Conhecer Projeto</span>
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M17 8l4 4m0 0l-4 4m4-4H3"
+                        />
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
+            </article>
+
+            <article
+              class="client-card-item theme-olive"
+              data-category="residencial"
+            >
+              <div class="client-card-accent-bar"></div>
+
+              <div class="client-content-body">
+                <div>
+                  <div class="client-header-meta">
+                    <span class="client-service-tag"
+                      >Residência & Interiores</span
+                    >
+                    <div
+                      class="client-rating-stars"
+                      aria-label="Avaliação 5 estrelas"
+                    >
+                      <svg viewBox="0 0 20 20">
+                        <path
+                          d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                        />
+                      </svg>
+                      <svg viewBox="0 0 20 20">
+                        <path
+                          d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                        />
+                      </svg>
+                      <svg viewBox="0 0 20 20">
+                        <path
+                          d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                        />
+                      </svg>
+                      <svg viewBox="0 0 20 20">
+                        <path
+                          d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                        />
+                      </svg>
+                      <svg viewBox="0 0 20 20">
+                        <path
+                          d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div class="client-quote-wrap">
+                    <span class="client-quote-mark" aria-hidden="true">
+                      <svg viewBox="0 0 32 26">
+                        <path
+                          d="M0 26V14.5455C0 6.64336 4.90909 1.18182 12.5455 0L14.7273 4.18182C9.45455 5.27273 6.90909 8.36364 6.90909 11.8182H13.8182V26H0ZM17.4545 26V14.5455C17.4545 6.64336 22.3636 1.18182 30 0L32.1818 4.18182C26.9091 5.27273 24.3636 8.36364 24.3636 11.8182H31.2727V26H17.4545Z"
+                        />
+                      </svg>
+                    </span>
+                    <p class="client-testimonial-quote">
+                      Agradeço de coração por toda a atenção. Palavras não são
+                      suficientes para expressar o quanto sou grata por tudo o
+                      que você fez por mim e minha família.
+                      <strong>Você realizou um sonho para todos nós</strong>,
+                      criando um refúgio acolhedor com integração total à
+                      natureza do nosso terreno.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="client-profile-row">
+                  <div class="client-avatar-wrapper">
+                    <img
+                      src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                      alt="Daniela Amorim"
+                      class="client-avatar-img"
+                    />
+                    <span
+                      class="client-verified-icon"
+                      title="Cliente verificado"
+                    >
+                      <svg viewBox="0 0 20 20">
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="client-info-col">
+                    <h2 class="client-name">Daniela Amorim</h2>
+                    <span class="client-handle">@amorimdani</span>
+                    <span class="client-role">Proprietária • Casa Aurora</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="client-project-side">
+                <div class="client-project-box">
+                  <div class="client-project-media-wrap">
+                    <img
+                      src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                      alt="Projeto Casa Aurora"
+                      class="client-project-img"
+                    />
+                    <span class="client-project-badge">Residencial</span>
+                  </div>
+                  <div class="client-project-details">
+                    <span class="client-project-overtitle"
+                      >Projeto Desenvolvido</span
+                    >
+                    <h3 class="client-project-name">Casa Aurora</h3>
+                    <div class="client-project-specs-list">
+                      <div class="client-project-spec-item">
+                        <svg
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                          />
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                          />
+                        </svg>
+                        <span>Curitiba, PR</span>
+                      </div>
+                      <div class="client-project-spec-item">
+                        <svg
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+                          />
+                        </svg>
+                        <span>520 m² • Conforto térmico biofílico</span>
+                      </div>
+                      <div class="client-project-spec-item">
+                        <svg
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                          />
+                        </svg>
+                        <span>Ano de Conclusão: 2023</span>
+                      </div>
+                    </div>
+                    <a href="projeto-4.html" class="client-project-btn">
+                      <span>Conhecer Projeto</span>
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M17 8l4 4m0 0l-4 4m4-4H3"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="client-card-item theme-terracotta"
+              data-category="corporativo"
+            >
+              <div class="client-card-accent-bar"></div>
+
+              <div class="client-content-body">
+                <div>
+                  <div class="client-header-meta">
+                    <span class="client-service-tag"
+                      >Arquitetura Corporativa</span
+                    >
+                    <div
+                      class="client-rating-stars"
+                      aria-label="Avaliação 5 estrelas"
+                    >
+                      <svg viewBox="0 0 20 20">
+                        <path
+                          d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                        />
+                      </svg>
+                      <svg viewBox="0 0 20 20">
+                        <path
+                          d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                        />
+                      </svg>
+                      <svg viewBox="0 0 20 20">
+                        <path
+                          d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                        />
+                      </svg>
+                      <svg viewBox="0 0 20 20">
+                        <path
+                          d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                        />
+                      </svg>
+                      <svg viewBox="0 0 20 20">
+                        <path
+                          d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div class="client-quote-wrap">
+                    <span class="client-quote-mark" aria-hidden="true">
+                      <svg viewBox="0 0 32 26">
+                        <path
+                          d="M0 26V14.5455C0 6.64336 4.90909 1.18182 12.5455 0L14.7273 4.18182C9.45455 5.27273 6.90909 8.36364 6.90909 11.8182H13.8182V26H0ZM17.4545 26V14.5455C17.4545 6.64336 22.3636 1.18182 30 0L32.1818 4.18182C26.9091 5.27273 24.3636 8.36364 24.3636 11.8182H31.2727V26H17.4545Z"
+                        />
+                      </svg>
+                    </span>
+                    <p class="client-testimonial-quote">
+                      Agradecemos sua confiança em nosso trabalho. Sua parceria
+                      foi essencial para o nosso
+                      <strong>sucesso institucional</strong>. É um privilégio
+                      contar com uma equipe tão dedicada e colaborativa,
+                      transformando nossa sede corporativa em um marco de
+                      produtividade, inovação e bem-estar.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="client-profile-row">
+                  <div class="client-avatar-wrapper">
+                    <img
+                      src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                      alt="Alicia Chaves"
+                      class="client-avatar-img"
+                    />
+                    <span
+                      class="client-verified-icon"
+                      title="Cliente corporativo verificado"
+                    >
+                      <svg viewBox="0 0 20 20">
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="client-info-col">
+                    <h2 class="client-name">Alicia Chaves</h2>
+                    <span class="client-handle">@aliciachaves</span>
+                    <span class="client-role"
+                      >Diretora de Operações • TechCorp</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="client-project-side">
+                <div class="client-project-box">
+                  <div class="client-project-media-wrap">
+                    <img
+                      src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                      alt="Sede Empresarial TechCorp"
+                      class="client-project-img"
+                    />
+                    <span class="client-project-badge">Corporativo</span>
+                  </div>
+                  <div class="client-project-details">
+                    <span class="client-project-overtitle"
+                      >Projeto Desenvolvido</span
+                    >
+                    <h3 class="client-project-name">Sede TechCorp</h3>
+                    <div class="client-project-specs-list">
+                      <div class="client-project-spec-item">
+                        <svg
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                          />
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                          />
+                        </svg>
+                        <span>São Paulo, SP</span>
+                      </div>
+                      <div class="client-project-spec-item">
+                        <svg
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+                          />
+                        </svg>
+                        <span>4.200 m² • Design biofílico corporativo</span>
+                      </div>
+                      <div class="client-project-spec-item">
+                        <svg
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                          />
+                        </svg>
+                        <span>Ano de Conclusão: 2024</span>
+                      </div>
+                    </div>
+                    <a href="projeto-1.html" class="client-project-btn">
+                      <span>Conhecer Projeto</span>
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M17 8l4 4m0 0l-4 4m4-4H3"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="client-card-item theme-sand"
+              data-category="corporativo"
+            >
+              <div class="client-card-accent-bar"></div>
+
+              <div class="client-content-body">
+                <div>
+                  <div class="client-header-meta">
+                    <span class="client-service-tag"
+                      >Edifício Comercial & Institucional</span
+                    >
+                    <div
+                      class="client-rating-stars"
+                      aria-label="Avaliação 5 estrelas"
+                    >
+                      <svg viewBox="0 0 20 20">
+                        <path
+                          d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                        />
+                      </svg>
+                      <svg viewBox="0 0 20 20">
+                        <path
+                          d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                        />
+                      </svg>
+                      <svg viewBox="0 0 20 20">
+                        <path
+                          d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                        />
+                      </svg>
+                      <svg viewBox="0 0 20 20">
+                        <path
+                          d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                        />
+                      </svg>
+                      <svg viewBox="0 0 20 20">
+                        <path
+                          d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div class="client-quote-wrap">
+                    <span class="client-quote-mark" aria-hidden="true">
+                      <svg viewBox="0 0 32 26">
+                        <path
+                          d="M0 26V14.5455C0 6.64336 4.90909 1.18182 12.5455 0L14.7273 4.18182C9.45455 5.27273 6.90909 8.36364 6.90909 11.8182H13.8182V26H0ZM17.4545 26V14.5455C17.4545 6.64336 22.3636 1.18182 30 0L32.1818 4.18182C26.9091 5.27273 24.3636 8.36364 24.3636 11.8182H31.2727V26H17.4545Z"
+                        />
+                      </svg>
+                    </span>
+                    <p class="client-testimonial-quote">
+                      A concepção do Plaza Tower superou todas as expectativas
+                      da diretoria. A harmonia entre
+                      <strong
+                        >monumentalidade estética, eficiência acústica e
+                        valorização imobiliária</strong
+                      >
+                      colocou nosso complexo em posição de vanguarda no mercado
+                      nacional.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="client-profile-row">
+                  <div class="client-avatar-wrapper">
+                    <img
+                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                      alt="Dr. Roberto Mendes"
+                      class="client-avatar-img"
+                    />
+                    <span
+                      class="client-verified-icon"
+                      title="Cliente corporativo verificado"
+                    >
+                      <svg viewBox="0 0 20 20">
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="client-info-col">
+                    <h2 class="client-name">Dr. Roberto Mendes</h2>
+                    <span class="client-handle">@robertomendes.adv</span>
+                    <span class="client-role"
+                      >Sócio Diretor • Mendes & Associados</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="client-project-side">
+                <div class="client-project-box">
+                  <div class="client-project-media-wrap">
+                    <img
+                      src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                      alt="Edifício Plaza Tower"
+                      class="client-project-img"
+                    />
+                    <span class="client-project-badge">Corporativo</span>
+                  </div>
+                  <div class="client-project-details">
+                    <span class="client-project-overtitle"
+                      >Projeto Desenvolvido</span
+                    >
+                    <h3 class="client-project-name">Edifício Plaza Tower</h3>
+                    <div class="client-project-specs-list">
+                      <div class="client-project-spec-item">
+                        <svg
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                          />
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                          />
+                        </svg>
+                        <span>Rio de Janeiro, RJ</span>
+                      </div>
+                      <div class="client-project-spec-item">
+                        <svg
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+                          />
+                        </svg>
+                        <span
+                          >7.800 m² • Fachada envidraçada de alto
+                          rendimento</span
+                        >
+                      </div>
+                      <div class="client-project-spec-item">
+                        <svg
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                          />
+                        </svg>
+                        <span>Ano de Conclusão: 2023</span>
+                      </div>
+                    </div>
+                    <a href="projeto-3.html" class="client-project-btn">
+                      <span>Conhecer Projeto</span>
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M17 8l4 4m0 0l-4 4m4-4H3"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -129,8 +842,18 @@
       <div class="footer-container">
         <div class="footer-row">
           <div class="footer-brand">
-            <img src="./heitor/Logotipos/Creme - Logo 4.png" alt="" />
+            <img
+              src="./heitor/Logotipos/Creme - Logo 4.png"
+              alt=""
+              onerror="
+                this.style.display = 'none';
+                this.parentElement.innerHTML =
+                  '<span class=\'footer-brand-logo\'>HOR</span><span class=\'footer-brand-subtitle\'>Arquitetura e Urbanismo</span>';
+              "
+            />
           </div>
+
+          <div class="footer-address">Avenida Paulista 100, 10119-101</div>
 
           <div class="footer-social-list">
             <a href="#" aria-label="LinkedIn" class="social-link">

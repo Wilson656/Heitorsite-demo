@@ -15,7 +15,13 @@
       <div class="site-header-container">
         <a href="index.html" class="site-logo">
           <span class="site-logo-text"
-            ><img src="./heitor/Logotipos/Creme - Logo 4.png" alt=""
+            ><img
+              src="./heitor/Logotipos/Creme - Logo 4.png"
+              alt=""
+              onerror="
+                this.style.display = 'none';
+                this.parentElement.textContent = 'HOR';
+              "
           /></span>
         </a>
         <nav class="main-nav">
@@ -81,8 +87,10 @@
 
           <div class="projects-gallery-grid">
             <div
-              class="project-gallery-item project-card"
+              class="project-gallery-item project-card-gallery"
               data-category="corporativo"
+              data-href="projeto-1.html"
+              onclick="window.location.href = 'projeto-1.html'"
             >
               <div class="project-gallery-media">
                 <img
@@ -99,8 +107,10 @@
             </div>
 
             <div
-              class="project-gallery-item project-card"
+              class="project-gallery-item project-card-gallery"
               data-category="residencial"
+              data-href="projeto-2.html"
+              onclick="window.location.href = 'projeto-2.html'"
             >
               <div class="project-gallery-media">
                 <img
@@ -117,8 +127,10 @@
             </div>
 
             <div
-              class="project-gallery-item project-card"
+              class="project-gallery-item project-card-gallery"
               data-category="corporativo"
+              data-href="projeto-3.html"
+              onclick="window.location.href = 'projeto-3.html'"
             >
               <div class="project-gallery-media">
                 <img
@@ -135,8 +147,10 @@
             </div>
 
             <div
-              class="project-gallery-item project-card"
+              class="project-gallery-item project-card-gallery"
               data-category="residencial"
+              data-href="projeto-4.html"
+              onclick="window.location.href = 'projeto-4.html'"
             >
               <div class="project-gallery-media">
                 <img
@@ -160,7 +174,15 @@
       <div class="footer-container">
         <div class="footer-row">
           <div class="footer-brand">
-            <img src="./heitor/Logotipos/Creme - Logo 4.png" alt="" />
+            <img
+              src="./heitor/Logotipos/Creme - Logo 4.png"
+              alt=""
+              onerror="
+                this.style.display = 'none';
+                this.parentElement.innerHTML =
+                  '<span class=\'footer-brand-logo\'>HOR</span><span class=\'footer-brand-subtitle\'>Arquitetura e Urbanismo</span>';
+              "
+            />
           </div>
 
           <div class="footer-social-list">
